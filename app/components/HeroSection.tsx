@@ -7,14 +7,15 @@ export function HeroSection() {
 
   return (
     <> 
-      <section className="min-h-screen pt-32 pb-20 px-6 md:px-12">
+      <section className="relative min-h-screen pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div
-              className="inline-block px-4 py-2 rounded-full text-sm font-medium"
+          <div
+              className="inline-block px-5 py-2.5 rounded-full text-sm font-medium text-white shadow-lg"
               style={{
-                background: 'rgba(244, 5, 105, 0.87)',
-                color: 'var(--color-deep-pink)'
+                background:
+                  'linear-gradient(135deg, #7b2cbf 0%, #c9188d 50%, #ff4fa3 100%)',
+                boxShadow: '0 6px 20px rgba(201, 24, 141, 0.28)'
               }}
             >
               ✨ THE GIFT DISCOVERY PLATFORM
@@ -25,7 +26,8 @@ export function HeroSection() {
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Find the{' '}
-              <span className="italic" style={{ color: '(rgba(244, 5, 105, 0.87)' }}>
+              
+              <span className="text-purple-700 italic">
                 Magic
               </span>
               <br />
@@ -41,9 +43,10 @@ export function HeroSection() {
                 onClick={() => setIsModalOpen(true)}
                 className="px-8 py-4 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-105"
                 style={{
-                  background: 'rgba(244, 5, 105, 0.87)',
-                  color: 'rgba(244, 5, 105, 0.87)',
-                  boxShadow: '0 8px 30px rgba(222, 58, 125, 0.4)'
+                  background:
+                    'linear-gradient(135deg, #7b2cbf 0%, #c9188d 50%, #ff4fa3 100%)',
+                  color: 'white',
+                  boxShadow: '0 10px 30px rgba(201, 24, 141, 0.35)'
                 }}
               >
                 <Sparkles className="w-5 h-5" />
@@ -53,7 +56,7 @@ export function HeroSection() {
               <button
                 className="px-8 py-4 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:bg-white/60"
                 style={{
-                  border: '2px solid var(--color-royal-purple)',
+                  border: '4px solid var(--color-royal-purple)',
                   color: 'rgba(244, 5, 105, 0.87)'
                 }}
               >
@@ -61,8 +64,17 @@ export function HeroSection() {
                 Suggest Gifts
               </button>
             </div>
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+<p className="text-xs md:text-sm uppercase tracking-[0.35em] text-pink-25/70 font-light">
+  Scroll to discover
+</p>
 
-            <p className="text-sm text-gray-400 uppercase tracking-wider">Scroll to discover</p>
+<div className="relative flex justify-center">
+  <div className="w-px h-14 bg-gradient-to-b from-pink-200/80 to-transparent animate-pulse" />
+  <div className="absolute top-0 w-2 h-2 rounded-full bg-pink-200/90 animate-bounce" />
+</div>
+
+</div>
           </div>
 
           <div className="relative flex items-center justify-center">
@@ -101,13 +113,7 @@ export function HeroSection() {
                     🎁
                   </div>
 
-                  <div
-                    className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-12 rounded-full"
-                    style={{
-                      background: 'linear-gradient(135deg, #DC143C 0%, #8B0000 100%)',
-                      boxShadow: '0 4px 15px rgba(220, 20, 60, 0.4)'
-                    }}
-                  />
+                
 
                   <div
                     className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
